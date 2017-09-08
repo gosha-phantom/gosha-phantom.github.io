@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block article %}
+	<!-- <div class="small-8 columns"> -->
+	{% for article in articles %}
+		<h6>Дата публикации: {{article.art_date}}</h6>
+	    <h5><a href="/articles/{{article.id}}">{{article.art_title}}</a></h5>
+	    <p>{{article.get_short_text}}</p>
+	    <p><a href="/articles/addlike/{{ article.id }}/"><img src="{% static "like.png" %}" width=100px></a>{{article.art_likes}}</p><hr>
+	{% endfor %}
+	<!-- </div> -->
+{% endblock %}

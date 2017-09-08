@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Django</title>
+  <link rel="stylesheet" type="text/css" href="{% static "static/css/foundation.css" %}">
+</head>
+<body>
+	<h1><a href="/">My blog</a></h1>
+	<!-- <div class="row"> -->
+	<div class="large-offset-1">
+	<!-- <div class="div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 columns""> -->
+	{% block article %}{% endblock %}
+	<!-- </div> -->
+	</div>
+	<!-- </div> -->
+</body>
+</html>
